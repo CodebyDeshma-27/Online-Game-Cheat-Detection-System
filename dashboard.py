@@ -48,6 +48,7 @@ def run_detection(player, rf, iso, scaler, feature_cols):
     iso_score= -iso.score_samples(X_scaled)[0]
     latency  = (time.time() - start) * 1000
     is_cheat = (rf_pred == 0) or (iso_pred == -1)
+    st.write(f"RF pred: {rf_pred}, RF proba: {rf_proba:.3f}")
     return is_cheat, rf_proba, iso_score, latency
 
 # ── HEADER ─────────────────────────────────────────────────
