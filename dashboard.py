@@ -9,7 +9,13 @@ import pandas as pd
 import numpy as np
 import joblib
 import time
-import os
+
+import os, subprocess
+if not os.path.exists('models/random_forest_model.pkl'):
+    os.makedirs('models', exist_ok=True)
+    os.makedirs('outputs', exist_ok=True)
+    subprocess.run(['python', 'generate_dataset.py'], check=True)
+    subprocess.run(['python', 'train_model.py'], check=True)
 
 st.set_page_config(page_title="AI Intrusion Detection System", page_icon="🎮", layout="wide")
 
