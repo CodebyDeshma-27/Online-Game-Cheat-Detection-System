@@ -11,7 +11,7 @@ import joblib
 import time
 import os
 
-st.set_page_config(page_title="AI Cheat Detection", page_icon="🎮", layout="wide")
+st.set_page_config(page_title="AI Intrusion Detection System", page_icon="🎮", layout="wide")
 
 # ── LOAD MODELS ────────────────────────────────────────────
 @st.cache_resource
@@ -46,7 +46,7 @@ def run_detection(player, rf, iso, scaler, feature_cols):
 
 # ── HEADER ─────────────────────────────────────────────────
 st.markdown("""
-<h1 style='text-align:center;color:#1565C0;'>🎮 AI-Based Intrusion Detection Framework</h1>
+<h1 style='text-align:center;color:#1565C0;'>🎮 AI-Based IDS framework with Cheat Detection System</h1>
 <h4 style='text-align:center;color:#666;'>Real-Time Multi-Genre Cheat Detection in Online Multiplayer Games</h4>
 <h5 style='text-align:center;color:#999;'>Meenakshi Sundararajan Engineering College, Chennai</h5>
 <hr>
